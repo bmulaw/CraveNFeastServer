@@ -91,6 +91,10 @@ def add_favorites(account_id):
     except Exception as e:
         return f"An Error Occurred: {e}"
 
+@app.route('/test', methods=["GET", "POST"])
+def test_connection():
+    return {"message": "is connected"}
+
 # Read one username
 @app.route('/auth', methods=["GET"])
 def read_account():
